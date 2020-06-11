@@ -16,5 +16,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(compression());
 
 app.get("/", (_req, res) => res.send("Server is alive"));
+app.get("/hello", (_req, res) => res.send("Hello to you too"));
 
 app.listen(process.env.PORT || port, () => console.log(`App is listening at port ${port}`));
